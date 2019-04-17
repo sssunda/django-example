@@ -1,0 +1,10 @@
+<h3>Comments</h3>>
+<ul>
+    {% for comment in post.comment_set.all %}
+        <li>
+            {{comment.message}}
+            <small>by {{comment.author}}</small>
+            <small>at {{comment.update_at}}</small>
+        </li>
+    {% endfor %}
+</ul>
